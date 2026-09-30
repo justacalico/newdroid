@@ -1,0 +1,52 @@
+{
+  "apps": [
+    {
+      "packageName": "org.v1.gamma",
+      "name": "Gamma App",
+      "summary": "V1 gamma",
+      "description": "old format",
+      "categories": ["Reading"],
+      "license": "MIT",
+      "author": "Gamma Dev",
+      "webSite": "https://gamma.test",
+      "sourceCode": "https://code.test/gamma",
+      "issueTracker": "https://code.test/gamma/issues",
+      "changelog": "https://code.test/gamma/cl",
+      "donate": "https://donate.test/gamma",
+      "added": 1600000000000,
+      "lastUpdated": 1601000000000,
+      "icon": "org.v1.gamma.5.png",
+      "suggestedVersionCode": "5"
+    },
+    {
+      "packageName": "org.v1.noname",
+      "lastUpdated": 1600000000000
+    }
+  ],
+  "packages": {
+    "org.v1.gamma": [
+      {
+        "versionName": "0.5",
+        "versionCode": 5,
+        "apkName": "org.v1.gamma_5.apk",
+        "added": 1601000000000,
+        "hash": "beef",
+        "size": 4096,
+        "minSdkVersion": "21",
+        "targetSdkVersion": "30",
+        "sig": "cafe",
+        "uses-permission": [{"name": "android.permission.INTERNET"}, "android.permission.WAKE_LOCK"],
+        "nativecode": ["armeabi-v7a"]
+      },
+      {
+        "versionName": "0.4",
+        "versionCode": 4,
+        "apkName": "org.v1.gamma_4.apk",
+        "size": 2048
+      }
+    ],
+    "org.v1.noname": [
+      {"versionName": "1.0", "versionCode": 1, "apkName": "org.v1.noname_1.apk"}
+    ]
+  }
+}

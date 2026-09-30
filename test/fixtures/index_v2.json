@@ -1,0 +1,97 @@
+{
+  "repo": {
+    "name": {"en-US": "Test Repo"},
+    "icon": {"en-US": {"name": "icon/repo.png", "sha256": "aa", "size": 10}},
+    "address": "https://repo.test/repo",
+    "timestamp": 1700000000000,
+    "version": 20001
+  },
+  "packages": {
+    "org.test.alpha": {
+      "metadata": {
+        "name": {"en-US": "Alpha App", "de": "Alpha DE"},
+        "summary": {"en-US": "The alpha app"},
+        "description": {"en-US": "<p>A long <b>alpha</b> description with a <a href=\"https://link.test\">link</a></p>"},
+        "categories": ["Internet", "System"],
+        "license": "GPL-3.0-only",
+        "authorName": "Alpha Dev",
+        "webSite": "https://alpha.test",
+        "sourceCode": "https://code.test/alpha",
+        "issueTracker": "https://code.test/alpha/issues",
+        "changelog": "https://code.test/alpha/CHANGELOG",
+        "donate": "https://donate.test/alpha",
+        "added": 1700000000000,
+        "lastUpdated": 1700500000000,
+        "icon": {"en-US": {"name": "icon/org.test.alpha.2.png", "sha256": "bb", "size": 100}},
+        "screenshots": {
+          "phone": {"en-US": [
+            {"name": "phone/alpha-1.png", "sha256": "cc", "size": 200},
+            {"name": "phone/alpha-2.png", "sha256": "dd", "size": 201}
+          ]},
+          "tenInch": {"en-US": [
+            {"name": "ten/alpha-1.png", "sha256": "ee", "size": 300}
+          ]}
+        },
+        "suggestedVersionCode": "3",
+        "antiFeatures": {"Ads": {"en-US": "Contains ads"}}
+      },
+      "versions": {
+        "h1": {
+          "added": 1700000000000,
+          "file": {"name": "/org.test.alpha_3.apk", "sha256": "aabbcc", "size": 1024},
+          "src": {"name": "/org.test.alpha_3_src.tar.gz", "sha256": "ff", "size": 512},
+          "manifest": {
+            "versionName": "1.2.0",
+            "versionCode": 3,
+            "usesSdk": {"minSdkVersion": 21, "targetSdkVersion": 34},
+            "signer": {"sha256": ["deadbeef"], "hasMultipleSigners": false},
+            "uses-permission": [{"name": "android.permission.INTERNET"}, "android.permission.VIBRATE"],
+            "uses-permission-sdk-23": [{"name": "android.permission.POST_NOTIFICATIONS", "maxSdkVersion": 0}],
+            "nativecode": ["arm64-v8a"],
+            "features": [{"name": "android.hardware.wifi"}]
+          },
+          "whatsNew": {"en-US": "Bug fixes"},
+          "antiFeatures": {"Tracking": {"en-US": "Tracks things"}}
+        },
+        "h2": {
+          "added": 1699000000000,
+          "file": {"name": "/org.test.alpha_2.apk", "sha256": "112233", "size": 512},
+          "manifest": {
+            "versionName": "1.1.0",
+            "versionCode": 2,
+            "usesSdk": {"minSdkVersion": 14, "targetSdkVersion": 30}
+          }
+        }
+      }
+    },
+    "org.test.beta": {
+      "metadata": {
+        "name": {},
+        "summary": {"en-US": "The beta app"},
+        "added": 1690000000000,
+        "lastUpdated": 1695000000000,
+        "categories": ["Development"],
+        "icon": {"fr": {"name": "icon/beta.png"}}
+      },
+      "versions": {
+        "h3": {
+          "added": 1690000000000,
+          "file": {"name": "/org.test.beta_9.apk", "sha256": "99", "size": 2048},
+          "manifest": {
+            "versionName": "9.0",
+            "versionCode": 9,
+            "usesSdk": {"minSdkVersion": 26, "targetSdkVersion": 33},
+            "nativecode": ["x86_64"]
+          }
+        }
+      }
+    },
+    "org.test.empty": {
+      "metadata": {
+        "name": {"en-US": "Empty App"},
+        "lastUpdated": 1680000000000
+      },
+      "versions": {}
+    }
+  }
+}
