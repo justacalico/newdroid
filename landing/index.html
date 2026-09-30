@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NewDroid — a fast F-Droid client</title>
+  <meta name="description" content="NewDroid is a fast, modern F-Droid client for Android. Browse, install and update free-software apps from F-Droid-compatible repositories.">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href=".">
+      <img src="assets/icon.png" alt="NewDroid icon" width="32" height="32">
+      NewDroid
+    </a>
+    <nav class="links">
+      <a href="https://gitlab.com/HttpAnimations/newdroid">Source</a>
+      <a href="https://gitlab.com/HttpAnimations/newdroid/-/releases">Releases</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <h1>F-Droid, without the wait.</h1>
+        <p class="lede">
+          NewDroid is a fast F-Droid client for Android. Browse the catalog,
+          install and update apps with verified downloads, and plug in any
+          F-Droid-compatible repository.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://gitlab.com/HttpAnimations/newdroid/-/releases">Get the APK</a>
+          <a class="btn btn-ghost" href="https://gitlab.com/HttpAnimations/newdroid">View source</a>
+        </div>
+        <p class="meta">Free software under the AGPL&nbsp;v3.</p>
+      </div>
+      <div class="shot-wrap">
+        <img class="shot" src="assets/screen-latest.png" alt="The NewDroid latest apps screen" loading="lazy">
+      </div>
+    </section>
+
+    <section class="wrap strip">
+      <figure class="reveal">
+        <img src="assets/screen-latest.png" alt="Latest apps list" loading="lazy">
+        <figcaption>Browse what changed.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="assets/screen-details.png" alt="App details page" loading="lazy">
+        <figcaption>Details that matter.</figcaption>
+      </figure>
+      <figure class="reveal">
+        <img src="assets/screen-updates.png" alt="Updates screen" loading="lazy">
+        <figcaption>Updates in one place.</figcaption>
+      </figure>
+    </section>
+
+    <section class="wrap">
+      <div class="section-head">
+        <h2>Built to stay out of the way.</h2>
+        <p>A client for the F-Droid ecosystem that loads fast, refreshes cheap
+          and never phones home.</p>
+      </div>
+      <div class="features">
+        <div class="feature reveal">
+          <h3>Incremental index refresh</h3>
+          <p>ETag-aware index fetching means refreshes transfer only what
+            changed. The catalog stays warm on disk, so browsing starts
+            instantly — even offline.</p>
+        </div>
+        <div class="feature reveal">
+          <h3>Verified installs</h3>
+          <p>Every APK is checked against the index SHA-256 before Android
+            sees it. Signature-aware update detection flags mismatches instead
+            of failing silently.</p>
+        </div>
+        <div class="feature reveal">
+          <h3>Bring your own repos</h3>
+          <p>F-Droid, IzzyOnDroid and Guardian Project presets ship in the box,
+            and any index-v2 or index-v1 repository can be added by URL.</p>
+        </div>
+        <div class="feature reveal">
+          <h3>Free software, end to end</h3>
+          <p>AGPL v3, no ads, no analytics, no accounts. Releases are built by
+            CI and mirrored to permanent GitLab release downloads.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap install">
+      <div class="section-head">
+        <h2>Install in a minute.</h2>
+        <p>Grab the signed APK from a release and open it — Android handles
+          the rest.</p>
+      </div>
+      <ol>
+        <li>Download <code>newdroid-&lt;version&gt;-android.apk</code> from the
+          <a href="https://gitlab.com/HttpAnimations/newdroid/-/releases">releases page</a>.</li>
+        <li>Open the file on your device and allow installs from your
+          browser when asked.</li>
+        <li>Launch NewDroid — the F-Droid index loads on first run.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>NewDroid — free software, AGPL v3.</span>
+    <span>
+      <a href="https://gitlab.com/HttpAnimations/newdroid">gitlab.com/HttpAnimations/newdroid</a>
+    </span>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add('on');
+          io.unobserve(e.target);
+        }
+      }
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
