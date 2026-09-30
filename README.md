@@ -1,7 +1,17 @@
 # NewDroid
 
+[![pipeline](https://gitlab.com/HttpAnimations/newdroid/badges/main/pipeline.svg)](https://gitlab.com/HttpAnimations/newdroid/-/pipelines)
+[![release](https://gitlab.com/HttpAnimations/newdroid/-/badges/release.svg)](https://gitlab.com/HttpAnimations/newdroid/-/releases)
+[![license: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-0E6E58)](LICENSE)
+
 A fast, modern F-Droid client for Android. Browse, search, install and update
 free-software Android apps from F-Droid-compatible repositories.
+
+<p>
+  <img src="docs/screenshots/latest_compact.png" width="240" alt="Latest apps">
+  <img src="docs/screenshots/details.png" width="240" alt="App details">
+  <img src="docs/screenshots/updates.png" width="240" alt="Updates">
+</p>
 
 ## Features
 
@@ -17,8 +27,12 @@ free-software Android apps from F-Droid-compatible repositories.
 
 ## Install
 
-Download the latest signed APK or AAB from
-[the releases page](https://gitlab.com/HttpAnimations/newdroid/-/releases).
+Download the latest signed APK from
+[the releases page](https://gitlab.com/HttpAnimations/newdroid/-/releases)
+and open it on your device.
+
+Website and landing page:
+[httpanimations.gitlab.io/newdroid](https://httpanimations.gitlab.io/newdroid/)
 
 ## Development
 
@@ -30,7 +44,7 @@ flutter run
 
 Releases are automated: conventional commits on `main` are bumped by
 [cocogitto](https://github.com/cocogitto/cocogitto), built on GitHub Actions
-and mirrored back to GitLab releases.
+and mirrored back to GitLab releases so binaries never expire.
 
 ## License
 
